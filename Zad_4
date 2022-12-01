@@ -1,0 +1,11 @@
+from pathlib import Path
+
+def poisk_po_rash(name, rasch):
+    rez = []
+    a = list(Path(name).rglob(rasch))
+    for i in a:
+        rez.append(str(i))
+    return rez
+
+f = input()
+print(poisk_po_rash('/home/stud/Pract1/StudyMake', f'*.{f}'))
