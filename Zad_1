@@ -1,0 +1,7 @@
+import shutil
+
+def rascop(archname, unpackdir='/home/stud/Raspac', copydir='/home/stud/Copy', mask='*.html'):
+    shutil.unpack_archive(archname, unpackdir, "gztar")
+    shutil.copytree(unpackdir, copydir, ignore=shutil.ignore_patterns(mask))
+
+rascop('masterclass.tar.gz')
