@@ -1,0 +1,7 @@
+import os
+
+def papinf(name):
+    f = list(os.walk(name))[0]
+    return (f[1],f[2])
+    
+print(papinf('/home/stud/KicadProjects/emptyList'))
